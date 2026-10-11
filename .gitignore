@@ -1,0 +1,10 @@
+@"
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+.env
+.env.*
+data/
+*.log
+"@ | Set-Content -Encoding utf8 .gitignore
