@@ -26,3 +26,16 @@ services:
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
       KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
       KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      
+  spark:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: fraud-spark
+    depends_on:
+      - kafka
+    volumes:
+      - ./src:/app/src
+      - ./checkpoints:/tmp/spark-checkpoints
+    restart: "no"
+
