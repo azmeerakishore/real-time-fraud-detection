@@ -1,4 +1,4 @@
-pandas
+﻿pandas==2.3.3
 numpy
 scikit-learn
 imbalanced-learn
@@ -9,3 +9,5 @@ joblib
 python-dotenv
 pytest
 httpx
+pyspark==4.2.0
+kafka-python
